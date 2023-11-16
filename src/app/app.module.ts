@@ -17,6 +17,7 @@ import { MatSortModule} from '@angular/material/sort';
 import { MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatSelectModule} from '@angular/material/select';
+import { EditAlunosComponent } from './edit-alunos/edit-alunos.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { MatSelectModule} from '@angular/material/select';
     TemplateComponent,
     FooterComponent,
     HeaderComponent,
-    ListAlunosComponent
+    ListAlunosComponent,
+    EditAlunosComponent
   ],
   imports: [
     BrowserModule,
