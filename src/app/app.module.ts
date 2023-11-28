@@ -18,6 +18,9 @@ import { MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatSelectModule} from '@angular/material/select';
 import { EditAlunosComponent } from './edit-alunos/edit-alunos.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CreateAlunosComponent } from './create-alunos/create-alunos.component';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -28,9 +31,11 @@ import { EditAlunosComponent } from './edit-alunos/edit-alunos.component';
     FooterComponent,
     HeaderComponent,
     ListAlunosComponent,
-    EditAlunosComponent
+    EditAlunosComponent,
+    CreateAlunosComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     MatTableModule,
@@ -41,7 +46,8 @@ import { EditAlunosComponent } from './edit-alunos/edit-alunos.component';
     MatSelectModule,
     FormsModule,
     RouterModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatCardModule
 
 
   ],
