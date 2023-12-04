@@ -17,4 +17,7 @@ export class AlunoService {
     return this.http.get<any>(`${this.apiURL}api/aluno/listar`);
   }
 
+  public addAluno(aluno: any): Observable<any> {
+    return this.http.post<any>(`${this.apiURL}api/aluno/incluir`, aluno);
+  }
 }

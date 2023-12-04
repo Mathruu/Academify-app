@@ -21,6 +21,7 @@ import { EditAlunosComponent } from './edit-alunos/edit-alunos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CreateAlunosComponent } from './create-alunos/create-alunos.component';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { MatCardModule } from '@angular/material/card';
     FormsModule,
     RouterModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
 
 
   ],
