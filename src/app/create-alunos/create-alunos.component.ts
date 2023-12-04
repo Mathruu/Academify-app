@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AlunoService } from '../shared/aluno.service';
 import { IListAlunos } from '../model/IListAlunos';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-create-alunos',
@@ -17,7 +18,7 @@ export class CreateAlunosComponent {
   displayedColumns: string[] = ['nome', 'matricula', 'nascimento', 'dataHoraCadastro'];
   dataSource = new MatTableDataSource<IListAlunos>([]);
 
-  constructor(private alunoService: AlunoService) {}
+  constructor(private alunoService: AlunoService, private snackBar: MatSnackBar) {}
 
   adicionarAluno() {
 
@@ -30,10 +31,23 @@ export class CreateAlunosComponent {
 
     this.alunoService.addAluno(alunoData).subscribe((alunos: IListAlunos[]) => {
       this.dataSource.data = alunos;
+      this.mostarSnackBar('Aluno adicionado com sucesso!');
+    },
+    (erro) => {
+      console.error(erro);
+      this.mostarSnackBar('Falha ao adicionar aluno!');
     });
-    
+
     this.nome = '';
     this.matricula = '';
     this.nascimento = '';
+  }
+
+    private mostarSnackBar(mensagem: string) : void {
+      this.snackBar.open(mensagem, 'OK', {
+        duration: 3000,
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom'
+      });
 }
 }
