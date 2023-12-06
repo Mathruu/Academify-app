@@ -19,21 +19,14 @@ export class AlunoService {
     return this.http.get<any>(`${this.apiURL}api/aluno/listar`);
   }
 
+  public getAlunoById(id: string): Observable<any> {
+    return this.http.get<any>(`${this.apiURL}api/aluno/get/${id}`);
+  }
+
   public addAluno(aluno: any): Observable<any> {
     return this.http.post<any>(`${this.apiURL}api/aluno/incluir`, aluno);
   }
 
-  // public deleteAluno(aluno: any): Observable<any> {
-  //   return this.http.delete<any>(`${this.apiURL}api/aluno/remover`, aluno);
-  // }
-
-//  public deleteAluno(aluno: IListAlunos): Observable<any> {
-//     const options = {
-//       body: aluno,
-//     };
-  
-//     return this.http.request('delete', `${this.apiURL}api/aluno/remover`, options);
-//   } 
 
 public deleteAluno(aluno: IListAlunos): Observable<any> {
   const options = {
@@ -45,8 +38,16 @@ public deleteAluno(aluno: IListAlunos): Observable<any> {
   );
 }
 
+  public editarAluno(aluno: IListAlunos): Observable<any> {
+    return this.http.put<any>(`${this.apiURL}api/aluno/editar`, aluno);
+  } 
+
 
   public atualizarListaAlunos(): Observable<IListAlunos[]> {
     return this.http.get<IListAlunos[]>(`${this.apiURL}api/aluno/listar`);
   }
+
+  // public atualizarAluno(aluno: IListAlunos): Observable<any> {
+  //   return this.http.put<any>(`${this.apiURL}api/aluno/atualizar/${aluno.id}`, aluno);
+  // }
 }

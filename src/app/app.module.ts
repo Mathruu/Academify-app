@@ -23,6 +23,9 @@ import { CreateAlunosComponent } from './create-alunos/create-alunos.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
 
 
 @NgModule({
@@ -51,8 +54,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    MatSnackBarModule
-
+    MatSnackBarModule,
+    MatDatepickerModule,
+    MatNativeDateModule
 
   ],
   providers: [],
