@@ -22,6 +22,12 @@ export class CreateAlunosComponent {
 
   adicionarAluno() {
 
+    if (!this.validarDataNascimento(this.nascimento)) {
+      console.error('A data de nascimento não é válida ou é posterior à data atual.');
+      this.mostarSnackBar('A data de nascimento não é válida ou é posterior à data atual.');
+      return;
+    }
+
     const alunoData = {
       nome: this.nome,
       matricula: this.matricula,
@@ -49,5 +55,16 @@ export class CreateAlunosComponent {
         horizontalPosition: 'center',
         verticalPosition: 'bottom'
       });
+}
+
+validarDataNascimento(nascimento: string): boolean {
+  const dataNascimento = new Date(nascimento);
+
+  if (!(dataNascimento instanceof Date) || isNaN(dataNascimento.getTime())) {
+    return false;
+  }
+
+  const dataAtual = new Date();
+  return dataNascimento <= dataAtual;
 }
 }

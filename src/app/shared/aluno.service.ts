@@ -47,7 +47,4 @@ public deleteAluno(aluno: IListAlunos): Observable<any> {
     return this.http.get<IListAlunos[]>(`${this.apiURL}api/aluno/listar`);
   }
 
-  // public atualizarAluno(aluno: IListAlunos): Observable<any> {
-  //   return this.http.put<any>(`${this.apiURL}api/aluno/atualizar/${aluno.id}`, aluno);
-  // }
 }
