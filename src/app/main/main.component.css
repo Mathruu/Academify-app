@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+img {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', "Helvetica Neue", sans-serif;
+}
+
+.title-table {
+    display: flex;
+    justify-content: center;
+}
+
+.title-table h1 {
+    font-family: 'Kanit', "Helvetica Neue", sans-serif;
+    font-size: 2.8em;
+    font-weight: 500;
+}
+
+
+@media (max-width: 600px) {
+    .title-table h1 {
+        font-size: 2.5em;
+        font-weight: 500;
+    }
+}
+
+@media (max-width: 450px) {
+    .title-table h1 {
+        font-size: 2em;
+        font-weight: 500;
+    }
+}
+
+
+/* ARTICLE----------------------------------------------------------> */
+.article {
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px -3px rgba(115,115,115,1);
+}
+
+@media (max-width: 1015px) {
+    .article {
+        margin: 15px 10px;
+    }
+}
+
+@media (max-width: 514px) {
+    .article {
+        display: block;
+    }
+}
+
+.article-img {
+    margin-left: 20px;
+    max-width: 200px;
+}
+
+@media (max-width: 1015px) {
+    .article-img {
+        margin: 3px 5px;
+    }
+}
+
+@media (max-width: 514px) {
+    .article-img {
+        margin: 3px auto;
+    }
+}
+
+
+.historia-moedas {
+    margin: 25px auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px -3px rgba(115,115,115,1);
+}
+
+@media (max-width: 1015px) {
+    .historia-moedas {
+        margin: 15px 10px;
+    }
+}
+
+.historia-moedas-h1 {
+    margin: 0 auto;
+}
+
+.historia-moedas-img {
+    margin: 0 auto;
+    max-width: 370px;
+}
+
+.moedas-paises {
+    width: 180px;
+}

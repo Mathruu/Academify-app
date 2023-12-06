@@ -3,24 +3,18 @@
 </div>
 
 <div class="content">
-    <mat-card>
-        <div class="input">
-            <mat-card-content>
-                <mat-form-field class="campo">
-                    <input id="nome" [(ngModel)]="nome" matInput placeholder="Nome">
-                </mat-form-field>
-                <br />
-                <mat-form-field class="campo">
-                    <input id="matricula" [(ngModel)]="matricula" matInput placeholder="Matrícula" />
-                </mat-form-field>
-                <br />
-                <mat-form-field class="campo">
-                    <input id="nascimento" [(ngModel)]="nascimento" matInput placeholder="Data de Nascimento" />
-                </mat-form-field>
-            </mat-card-content>
-        </div>
-            <div class="button">
-                <button class="botao" (click)="adicionarAluno()" mat-raised-button color="primary">CADASTRAR</button>
-            </div>
-    </mat-card>
+    <div class="input-container">
+        <mat-form-field class="campo">
+            <input id="nome" [(ngModel)]="nome" matInput placeholder="Nome">
+        </mat-form-field>
+        <br />
+        <mat-form-field class="campo">
+            <input id="matricula" [(ngModel)]="matricula" matInput placeholder="Matrícula" />
+        </mat-form-field>
+        <br />
+        <mat-form-field class="campo">
+            <input id="nascimento" [(ngModel)]="nascimento" matInput placeholder="Data de Nascimento" />
+        </mat-form-field>
+        <button class="button" (click)="adicionarAluno()" mat-raised-button color="primary">CADASTRAR</button>
+    </div>
 </div>
