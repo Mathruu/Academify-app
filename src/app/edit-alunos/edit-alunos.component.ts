@@ -20,10 +20,9 @@ export class EditAlunosComponent implements OnInit{
   constructor(private route: ActivatedRoute, private alunoService: AlunoService, private router: Router) { }
 
   ngOnInit(): void {
-    // Obtém o ID do aluno da rota
+    
     const alunoId = this.route.snapshot.paramMap.get('id');
 
-    // Recupera os detalhes do aluno com base no ID
     if (alunoId) {
       this.alunoService.getAlunoById(alunoId).subscribe(
         (aluno: IListAlunos) => {
