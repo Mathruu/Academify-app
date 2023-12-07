@@ -28,6 +28,18 @@ export class CreateAlunosComponent {
       return;
     }
 
+    if (!this.validarNome(this.nome)) {
+      console.error('O nome deve conter pelo menos 3 letras.');
+      this.mostarSnackBar('O nome deve conter pelo menos 3 letras.');
+      return;
+    }
+  
+    if (!this.validarMatricula(this.matricula)) {
+      console.error('A matrícula deve conter pelo menos 8 letras ou números.');
+      this.mostarSnackBar('A matrícula deve conter pelo menos 8 letras ou números.');
+      return;
+    }
+
     const alunoData = {
       nome: this.nome,
       matricula: this.matricula,
@@ -66,5 +78,21 @@ validarDataNascimento(nascimento: string): boolean {
 
   const dataAtual = new Date();
   return dataNascimento <= dataAtual;
+}
+
+validarNome(nome: string): boolean {
+  if (!nome || nome.length < 3) {
+    return false;
+  }
+
+  return true;
+}
+
+validarMatricula(matricula: string): boolean {
+  if (!matricula || matricula.length < 8) {
+    return false;
+  }
+
+  return true;
 }
 }
